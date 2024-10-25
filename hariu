@@ -1,0 +1,37 @@
+#1B
+#2B
+#3C
+#4A
+#5C
+#6A
+#7C
+#7.1 C 
+#8C
+#9A
+#10D
+#11B
+#12B
+#13Массив: Дохионы тоо хэмжээ хүрээгээр хязгаарлагддаг, мөрийг хамардаг, агуулсан өгөгдлийг зөвшөөрдөг.
+# Холбоослогдсон жагсаалт: Динамик хэмжээ, элементүүд нь холбоосоор холбогдсон байдаг. 
+#14
+
+#15C
+#16A
+#17B
+#18C
+#1
+def greedy_coin_change(amount):
+    coins = [25, 10, 5, 1]
+    coin_count = {}
+    
+    for coin in coins:
+        count = amount // coin
+        if count > 0:
+            coin_count[coin] = count
+            amount -= count * coin
+            
+    return coin_count
+
+
+result = greedy_coin_change(67)
+print(result)
